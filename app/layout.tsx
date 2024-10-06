@@ -12,6 +12,25 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const NeueMontreal = localFont({
+  src: "./fonts/NeueMontreal.woff",
+  variable: "--font-neue-montreal",
+  weight: "100 900",
+});
+
+const NeueMontrealBold = localFont({
+  src: "./fonts/NeueMontreal-Bold.woff",
+  variable: "--font-neue-montreal-bold",
+  weight: "100 200 300 400 500 600 700 800",
+});
+
+const NeueMontrealMedium = localFont({
+  src: "./fonts/NeueMontreal-Medium.woff",
+  variable: "--font-neue-montreal-medium",
+  weight: "100 200 300 400 500 600 700 800",
+});
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +45,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${NeueMontreal.variable} ${NeueMontrealBold.variable} ${NeueMontrealMedium.variable} antialiased`}
       >
+       
         {children}
+       
       </body>
     </html>
   );
