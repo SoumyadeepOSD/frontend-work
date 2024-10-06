@@ -22,8 +22,6 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import TopSheetContent from "../_components/top-sheet-content";
-import { Toaster } from "@/components/ui/toaster"
-import { useToast } from "@/hooks/use-toast";
 
 
 const FlighSearchComponent = ({decoration}:{decoration:boolean}) => {
@@ -44,13 +42,10 @@ const FlighSearchComponent = ({decoration}:{decoration:boolean}) => {
     const handleToChange = (code: string) => {
         setSelectedTo(code);
     };
-    const { toast } = useToast();
-
 
     if (isClient)
         return (
             <section className={`w-[68%] mt-10 border-2 p-5 ${decoration ? "border-slate-200" : "border-white"}  rounded-xl`}>
-                 <Toaster />
                 <div>
                     {decoration&&<div className="bg-slate-100 w-fit px-10 py-2 rounded-lg text-black font-neueMontrealMedium">
                         Flights

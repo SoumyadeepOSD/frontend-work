@@ -57,7 +57,7 @@ const SingleFlight = ({ firstFlight, secondFlight }: SingleFlightProps) => {
                                 <p className="text-sm text-gray-600">{secondFlight.airline} • {secondFlight.flightNumber}</p>
                                 <p className="font-semibold flex flex-row items-start gap-1">
                                     <span>
-                                    {secondFlight.departureTime} - {secondFlight.arrivalTime}
+                                        {secondFlight.departureTime} - {secondFlight.arrivalTime}
                                     </span>
                                     <span className="text-red-800 text-xs font-neueMontrealMedium">+1 day</span>
                                 </p>
@@ -77,7 +77,8 @@ const SingleFlight = ({ firstFlight, secondFlight }: SingleFlightProps) => {
                 </section>
 
                 {/* Price and Select Section */}
-                <div className="bg-slate-300 w-[2px]"/>                <section className="flex flex-col items-start justify-end w-[20%] ml-2 p-3">
+                <div className="bg-slate-300 w-[2px]" />
+                <section className="flex flex-col items-start justify-end w-[20%] ml-2 p-3">
                     <p className="text-sm text-gray-600">from</p>
                     <p className="text-lg font-bold">AED 2,456.90</p>
                     <Button variant="default" className="w-full mt-3">Select</Button>
